@@ -5,22 +5,60 @@ import React, { useState } from "react";
 const QandA = () => {
 
 
-  const questandAns = [
-    { text: "What are you here for ? ", answer: "to code", id: 1 },
-    { text: "Who is the presido of Nigeria ? ", answer: "Sey baba", id: 2 },
-    { text: "What is your name ? ", answer: "King Akande", id: 3 },
-  ];
+  const CurrentAffairs =[
+    {
+      "question": "Who is the current Secretary-General of the United Nations?",
+      "answer": "António Guterres"
+    },
+    {
+      "question": "Which country hosted the 2024 Summer Olympics?",
+      "answer": "Paris, France"
+    },
+    {
+      "question": "What is the name of the latest Mars rover launched by NASA?",
+      "answer": "Perseverance"
+    },
+    {
+      "question": "Who is the current President of the United States?",
+      "answer": "Joe Biden"
+    },
+    {
+      "question": "Which country became the 31st member of NATO in 2023?",
+      "answer": "Finland"
+    },
+    {
+      "question": "What is the largest trade agreement currently in effect?",
+      "answer": "The Regional Comprehensive Economic Partnership (RCEP)"
+    },
+    {
+      "question": "Who is the first African woman to win a Nobel Prize in Literature?",
+      "answer": "Nadine Gordimer (1991)"
+    },
+    {
+      "question": "What is the theme for World Environment Day 2024?",
+      "answer": "Beat Plastic Pollution"
+    },
+    {
+      "question": "Which country is leading the global production of electric vehicles in 2024?",
+      "answer": "China"
+    },
+    {
+      "question": "Who is the current President of Nigeria?",
+      "answer": "Bola Ahmed Tinubu"
+    }
+  ]
+  
 
 
 
   return (
     <div className="w-[700px] mt-[100px] mx-auto flex flex-col gap-6">
-      {questandAns.map((q, i) => (
+      {CurrentAffairs.map((q, i) => (
         <QuestionandA
           num={i}
-          text={q.text}
+          question={q.question}
           answer={q.answer}
-          key={q.text}
+          key={q.question}
 
         />
       ))}
@@ -30,7 +68,7 @@ const QandA = () => {
 
 export default QandA;
 
-function QuestionandA({ num, text, answer}) {
+function QuestionandA({ num, question, answer}) {
 
   const [isOpen, setisOpen] = useState(false);
   function handleClick() {
@@ -57,7 +95,7 @@ function QuestionandA({ num, text, answer}) {
           isOpen ? "text-green-700" : "text-gray-800"
         }`}
       >
-        {text}
+        {question}
       </p>
       <p
         className={`text-xl font-medium ${
