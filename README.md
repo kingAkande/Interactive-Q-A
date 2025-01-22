@@ -1,8 +1,9 @@
-# React + Vite
+# Current Affairs Accordion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React app displays current affairs questions and answers in an interactive accordion format. Users can click a question to reveal its answer. It demonstrates React hooks for state management and Tailwind CSS for styling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Data:** Displays questions and answers from a JSON file.
+- **Interactive UI:** Click questions to toggle answers.
+- **Responsive Design:** Styled with Tailwind CSS for a clean layout.
